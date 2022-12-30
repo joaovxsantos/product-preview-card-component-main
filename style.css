@@ -33,6 +33,10 @@ body {
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
+.main-card #img1 {
+  display: none;
+}
+
 .content-card {
   width: 26rem;
   background: var(--white);
@@ -63,47 +67,66 @@ body {
   line-height: 3rem;
 }
 
-
-
-.value-card{
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 2rem;
+.value-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.value-card span:first-child{
-    font-size: 3.5rem;
-    color: var(--darkcyan);
-    font-family: "Fraunces", serif;
-
+.value-card span:first-child {
+  font-size: 3.5rem;
+  color: var(--darkcyan);
+  font-family: "Fraunces", serif;
 }
 
-.value-card span:last-child{
-    font-size: 1.2rem;
-    text-decoration: line-through;
-    color: var(--darkgraysihblue);
+.value-card span:last-child {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  color: var(--darkgraysihblue);
 }
 
-
-.content-card button{
-    width: 100%;
-    padding: 1.5rem;
-    background: var(--darkcyan);
-    color: var(--white);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: 1s ease-out;
+.content-card button {
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--darkcyan);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: 1s ease-out;
 }
 
-.content-card button:hover{
-    background: hsl(158, 77%, 12%);
+.content-card button:hover {
+  background: hsl(158, 77%, 12%);
+}
+
+@media (max-width: 500px) {
+  .main-card {
+    flex-direction: column;
+  }
+
+  .main-card #img1 {
+    display: inline;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .main-card #img2 {
+    display: none;
+  }
+
+  .main-card img {
+    width: 28rem;
+  }
+
+  .content-card {
+    width: 28rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
 }
